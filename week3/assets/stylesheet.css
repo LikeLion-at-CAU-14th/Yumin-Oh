@@ -21,8 +21,8 @@ nav a {
 }
 
 .sky{
-   height: 390px;
-   background-color: #8babfd;
+    height: 390px;
+    background-color: #8babfd;
 }
 
 .cloud{
@@ -170,7 +170,7 @@ nav a {
 
 .bar{
     height: 15px;
-    width: 500px;
+    width: 90%;
     background-color: rgb(166, 165, 165);
     border: 2px solid #000000;
     padding: 3px;
