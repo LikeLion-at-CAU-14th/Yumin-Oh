@@ -1,8 +1,11 @@
+
 body {
     max-width: 800px;
+    width: 100%;
     font-family: 'DotGothic16', sans-serif;
     margin: 0;
 }
+
 
 nav {
     padding: 8px;
@@ -25,6 +28,7 @@ nav a {
     height: 390px;
     background-color: #8babfd;
 }
+
 
 .cloud{
     position: absolute;
@@ -57,7 +61,7 @@ nav a {
     background-color: #f1efef;
     color:#000000;
     text-align: center;
-    margin-top: 80px;
+    margin: 80px;
     margin-left: 230px;
     margin-right: 230px;
     border: 5px solid #000000;
