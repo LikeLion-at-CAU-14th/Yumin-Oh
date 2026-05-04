@@ -24,7 +24,9 @@ let photoIndex = 1;
 async function getData() {
     let count = 1;
     // baseURL과 option 객체들의 값을 조합하여 최종적으로 데이터를 요청할 주소를 만듦
-    const url = `${baseURL}/galleryList1?numOfRows=${option.numofRows}&MobileApp=${option.MobileApp}&MobileOS=${option.MobileOS}&arrange=${option.arrange}&_type=${option._type}&pageNo=${option.pageNo}&serviceKey=${option.serviceKey}`;
+    const randomPage = Math.floor(Math.random() * 100) + 1; // 1~100 사이 랜덤 정수 생성
+
+    const url = `${baseURL}/galleryList1?numOfRows=${option.numofRows}&MobileApp=${option.MobileApp}&MobileOS=${option.MobileOS}&arrange=${option.arrange}&_type=${option._type}&pageNo=${randomPage}&serviceKey=${option.serviceKey}`;
 
     const fetchData = await fetch(url);  // 해당 url로 네트워크 요청을 보내 데이터를 가져옴
     const toJSON = await fetchData.json();
