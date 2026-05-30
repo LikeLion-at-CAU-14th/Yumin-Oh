@@ -1,122 +1,124 @@
-@font-face {
-    font-family: 'OkMallangW';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2603-1@1.0/OkMallangW-Regular.woff2') format('woff2');
-    font-weight: normal;
-    font-display: swap;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-* {
-  font-family: 'OkMallangW', sans-serif;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+body{
+    display: flex;
+    padding: 50px;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+   
+    
 }
 
-#page {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 60px 24px 20px;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
+.container{
+    display: flex;
+    width: 450px;
+    border: 1px solid #FF7710;
+    border-radius: 15px;
+    flex-direction: column;
+    gap: 30px;
+    padding: 60px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 20px rgba(255, 125, 32, 0.25); 
 }
 
-header {
+header{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.title{
+    font-size: 16px;
+    font-weight: bold;
+    color:#FF7710;
+}
+
+.logo{
+    width: 45px;
+    flex-shrink: 0;
+}
+
+.input{
+    padding-top: 40px;
+}
+
+.info{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding-bottom: 40px;
-    margin-bottom: 40px;
-    flex-shrink: 0;
     gap: 15px;
+    color: #797979;
+
+
 }
 
-#writeBtn {
-  border-radius: 15px;
-  border: dotted 2px rgba(181, 181, 181, 0.655);
-  padding: 10px 20px;
+.info-list{
+    border-bottom: 1px solid #bfbfbf;
+    padding-bottom: 40px;
+    font-size: 12px;
 }
 
-#guestbookForm {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+.gender{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px;
+    font-size: 12px;
+    align-items: center;
+
 }
 
-#modal {
-  display: flex;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.8);  
-  justify-content: center;
-  align-items: center;
-  
+.circle{
+    border: 1px solid #cfcfcf;
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    background-color: #e1e1e1;
+    padding: 0;
+    
 }
 
-#writeGuestBook {
-  background: white;
-  padding: 40px;
-  border-radius: 12px;
-  width: 400px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);  
+.set{
+    display: flex;
+    gap: 5px;
+    align-items: center;
 }
 
-#submitBtn {
-  padding: 10px 20px;
+
+
+.agreement{
+    display: flex;
+    gap: 5px;
+    border-bottom: 1px solid #bfbfbf;
+    padding-bottom: 20px;
+
 }
 
-#container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
+.agreement p{
+    font-size: 10px;
 }
 
-.card {
-  border: 1px solid #eee;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  flex-shrink: 0;
+.square{
+    border: 1px solid #cfcfcf;
+    border-radius: 3px;
+    width: 14px;
+    height: 14px;
+    background-color: #ffffff;
+    padding: 0;
+
 }
 
-.card-footer {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 12px;
-}
+footer{
+    display: flex;
+    justify-content: center;
+    color: #FF7710;
+    border: 1px solid #FF7710;
+    border-radius: 7px;
+    padding: 20px;
+    font-size: 12px;
 
-.card-footer.button {
-  
-}
-
-#deleteModal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#deleteBox {
-  background: white;
-  padding: 40px;
-  border-radius: 12px;
-  width: 350px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.deleteButtons {
-  display: flex;
-  gap: 10px;
 }
