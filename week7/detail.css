@@ -1,0 +1,16 @@
+#detailbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    margin: 30px auto;  
+    width: 70%; 
+}
+
+img {
+    width: 30%;
+    height: auto;
+    object-fit: cover;
+  }
