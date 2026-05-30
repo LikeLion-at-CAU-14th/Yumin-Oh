@@ -34,7 +34,7 @@
 ## [GOAL]
 
 
-🚀 **Turning ideas into smooth web experiences**
+**Turning ideas into smooth web experiences**
 
 
 
