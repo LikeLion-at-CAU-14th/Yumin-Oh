@@ -3,10 +3,6 @@ import styled from 'styled-components';
 const LionCard = ({ data }) => {
     return (
         <CardLayout>
-            {/* 성별 뱃지 */}
-            <GenderBadge $gender={data.gender}>
-                {data.gender === 'male' ? '👦 남' : '👧 여'}
-            </GenderBadge>
 
             {/* 사자 아이콘 */}
             <LionIcon>🦁</LionIcon>
@@ -40,17 +36,6 @@ const CardLayout = styled.div`
     }
 `;
 
-const GenderBadge = styled.span`
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 11px;
-    padding: 3px 8px;
-    border-radius: 8px;
-    background-color: ${(props) => props.$gender === 'male' ? '#e3f0ff' : '#ffe3f0'};
-    color: ${(props) => props.$gender === 'male' ? '#1a6bc4' : '#c41a6b'};
-    font-weight: 600;
-`;
 
 const LionIcon = styled.div`
     font-size: 42px;

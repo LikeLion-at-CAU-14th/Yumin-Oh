@@ -15,7 +15,7 @@ const LionList = () => {
 
     const filteredData = filter === 'all'
         ? lionData
-        : lionData.filter((lion) => lion.gender === filter);
+        : lionData.filter((lion) => lion.part === filter);
 
     const totalPages    = Math.ceil(filteredData.length / PER_PAGE);
     const offset        = (curPage - 1) * PER_PAGE;
