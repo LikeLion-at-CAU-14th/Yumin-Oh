@@ -40,6 +40,7 @@ export default function App() {
     mutationFn: deletePost,
     onSuccess : () => {
       queryClient.invalidateQueries({queryKey : ['posts']});
+      setSelectedPostId(null);
     },
   });
 
