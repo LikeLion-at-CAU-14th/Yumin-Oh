@@ -4,7 +4,7 @@ import Header from './components/Header';
 import PostForm from './components/PostForm';
 import PostList from './components/PostList';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
-import { addPost, getPostDetail, getPosts } from './api/posts';
+import { addPost, deletePost, getPostDetail, getPosts } from './api/posts';
 
 export default function App() {
 	// 선택된 게시글 id 상태 만들기
@@ -35,6 +35,13 @@ export default function App() {
   });
 
   // [과제3] useMutation으로 게시글 삭제 기능 만들기
+  const deletePostMutation = useMutation({
+    mutationFn: deletePost,
+    onSuccess : () => {
+      queryClient.invalidateQueries({queryKey : ['posts']});
+    },
+  });
+
 
   return (
     <Wrapper>
