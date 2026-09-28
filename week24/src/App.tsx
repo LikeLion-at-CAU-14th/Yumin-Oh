@@ -5,6 +5,7 @@ import PostForm from './components/PostForm';
 import PostList from './components/PostList';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { addPost, deletePost, getPostDetail, getPosts } from './api/posts';
+import PostDetail from './components/PostDetail';
 
 export default function App() {
 	// 선택된 게시글 id 상태 만들기
@@ -69,20 +70,25 @@ export default function App() {
             />
           </ListSection>
           
-					{/*
+					
           <DetailSection>
 	          {selectedPostId === null ? (
 		          <EmptyDetail>게시글을 선택하면 상세 내용이 여기에 표시됩니다.</EmptyDetail>
 		        ) : (
-			        <PostDetail 
+			        <PostDetail
 				        // [과제4-1] 상세 조회 결과를 상세 컴포넌트에 전달.
+                post={detailQuery.data}
 				        // [과제4-2] 상세 조회의 로딩 상태를 전달.
+                isPending={detailQuery.isPending}
 				        // [과제4-3] 상세 조회의 에러 상태를 전달.
+                isError={detailQuery.isError}
 				        // [과제4-4] 삭제 버튼을 누르면 현재 선택된 게시글 id로 삭제 mutation을 실행.
+                onDelete={() => {
+                  deletePostMutation.mutate(selectedPostId);
+                }}
 			        />
 			       )}
           </DetailSection>
-          */}
         </ContentLayout>
       </Container>
     </Wrapper>
