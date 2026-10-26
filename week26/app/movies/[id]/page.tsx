@@ -1,4 +1,5 @@
 import { movies } from '@/data/movies';
+import Image from 'next/image';
 
 interface MovieDetailPageProps {
   params: Promise<{
@@ -23,9 +24,11 @@ export default async function MovieDetailPage({
     <main>
       <h1>{movie.title}</h1>
       
-      <img
+      <Image
         src={movie.image}
         alt={movie.title}
+        width={300}
+        height={450}
       />
 
       <p>
