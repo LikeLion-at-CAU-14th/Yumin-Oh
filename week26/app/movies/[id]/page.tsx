@@ -1,5 +1,6 @@
 import { movies } from '@/data/movies';
 import Image from 'next/image';
+import MovieReviewsButton from '@/components/MovieReviewsButton';
 
 interface MovieDetailPageProps {
   params: Promise<{
@@ -38,6 +39,7 @@ export default async function MovieDetailPage({
       <p style={{ whiteSpace: 'pre-line' }}>{movie.description}</p>
 
       {/*과제3 - 관람평 불러오기*/}
+      <MovieReviewsButton />
 
     </main>
   );

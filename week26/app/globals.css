@@ -178,3 +178,7 @@ header a {
 .detail-font {
   font-family: var(--font-hahmlet);
 }
+
+.review-card {
+  color: black;
+}
