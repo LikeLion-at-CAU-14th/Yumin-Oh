@@ -174,3 +174,7 @@ header a {
 .header nav a {
   font-weight: 600;
 }
+
+.detail-font {
+  font-family: var(--font-hahmlet);
+}
