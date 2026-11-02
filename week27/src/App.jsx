@@ -1,6 +1,10 @@
 import { useState } from "react";
 import "./App.css";
 import axios from "axios";
+import ganadi from "./assets/ganadi.png";
+
+const getTime = () =>
+  new Date().toLocaleTimeString("ko-KR", { hour: "numeric", minute: "2-digit" });
 
 function App() {
   const [input, setInput] = useState("");
@@ -8,7 +12,8 @@ function App() {
   const [messages, setMessages] = useState([
     {
       role: "assistant",
-      text: "안녕하세요! 무엇이든 물어보세요 👋",
+      text: "안녕하세요! 무엇이든 물어보세용",
+      time: getTime(),
     },
   ]);
 
@@ -24,6 +29,7 @@ function App() {
       {
         role: "user",
         text: userMessage,
+        time: getTime(),
       },
     ]);
 
@@ -111,6 +117,7 @@ function App() {
         {
           role: "assistant",
           text: aiText,
+          time: getTime(),
         },
       ]);
 
@@ -126,6 +133,7 @@ function App() {
         {
           role: "assistant",
           text: `오류가 발생했습니다.\n${errorMessage}`,
+          time: getTime(),
         },
       ]);
 
@@ -149,8 +157,8 @@ function App() {
 
         <header className="chat-header">
           <div>
-            <h1>Likelion CAU Chatbot 🦁</h1>
-            <p>week27 AI API 실습</p>
+            <h1>듀가나디 Chatbot</h1>
+            <p>듀...</p>
           </div>
 
           <div className="status">
@@ -171,8 +179,11 @@ function App() {
             >
               {message.role === "assistant" && (
                 <div className="avatar">
-                  멋사AI
+                  <img src={ganadi} alt="가나디" />
                 </div>
+              )}
+              {message.role === "user" && (
+                <span className="message-time">{message.time}</span>
               )}
 
               <div
@@ -184,13 +195,17 @@ function App() {
               >
                 {message.text}
               </div>
+
+              {message.role === "assistant" && (
+                <span className="message-time">{message.time}</span>
+              )}
             </div>
           ))}
 
           {loading && (
             <div className="message-row assistant-row">
               <div className="avatar">
-                멋사AI
+                <img src={ganadi} alt="가나디" />
               </div>
 
               <div className="message assistant-message loading-message">
